@@ -6,9 +6,9 @@ export async function generateArticleCode(openAIHelper, file) {
     await writeToFile("html-files/" + file + ".html", response);
 }
 
-export async function generateArticlePreview(file) {
-    const template = await readFromFile("html-files/szablon.html");
+export async function generateArticlePreview(templateName, file, previewName) {
+    const template = await readFromFile("html-files/" + templateName + ".html");
     const articleContent = await readFromFile("html-files/" + file + ".html");
     const fileContent = template.replace("<body></body>", "<body>\n" + articleContent + "\n</body>");
-    await writeToFile("html-files/podglad.html", fileContent);
+    await writeToFile("html-files/" + previewName + ".html", fileContent);
 }
