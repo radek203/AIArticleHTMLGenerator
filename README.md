@@ -1,5 +1,8 @@
 # AIArticleHTMLGenerator
 
+AIArticleHTMLGenerator is a Node.js project that uses the OpenAI API to generate an article HTML based on a given article text.
+It also has a function to insert the article into an HTML template.
+
 ## Setup and Run Instructions
 
 To set up and run the AIArticleHTMLGenerator project, follow these steps:
